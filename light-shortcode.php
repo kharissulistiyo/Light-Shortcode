@@ -19,11 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @access public
  * @return void
  */
-function woocommerce_add_shortcode_button() {
+function ls_add_shortcode_button() {
 	if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) return;
 	if ( get_user_option('rich_editing') == 'true') :
-		add_filter('mce_external_plugins', 'woocommerce_add_shortcode_tinymce_plugin');
-		add_filter('mce_buttons', 'woocommerce_register_shortcode_button');
+		add_filter('mce_external_plugins', 'ls_add_shortcode_tinymce_plugin');
+		add_filter('mce_buttons', 'ls_register_shortcode_button');
 	endif;
 	
 	// Admin style
@@ -42,23 +42,23 @@ function woocommerce_add_shortcode_button() {
 	
 }
 
-add_action( 'init', 'woocommerce_add_shortcode_button' );
+add_action( 'init', 'ls_add_shortcode_button' );
 
 
 
 /**
- * woocommerce_add_tinymce_lang function.
+ * ls_add_tinymce_lang function.
  *
  * @access public
  * @param mixed $arr
  * @return void
  */
-function woocommerce_add_tinymce_lang( $arr ) {
-    $arr['WooCommerceShortcodes'] = plugin_dir_path( __FILE__ ) . 'editor_plugin_lang.php';
+function ls_add_tinymce_lang( $arr ) {
+    $arr['LightShortcodes'] = plugin_dir_path( __FILE__ ) . 'editor_plugin_lang.php';
     return $arr;
 }
 
-add_filter( 'mce_external_languages', 'woocommerce_add_tinymce_lang', 10, 1 );
+add_filter( 'mce_external_languages', 'ls_add_tinymce_lang', 10, 1 );
 
 
 
@@ -71,8 +71,8 @@ add_filter( 'mce_external_languages', 'woocommerce_add_tinymce_lang', 10, 1 );
  * @param mixed $buttons
  * @return array
  */
-function woocommerce_register_shortcode_button($buttons) {
-	array_push($buttons, "|", "woocommerce_shortcodes_button");
+function ls_register_shortcode_button($buttons) {
+	array_push($buttons, "|", "ls_shortcodes_button");
 	return $buttons;
 }
 
@@ -87,8 +87,8 @@ function woocommerce_register_shortcode_button($buttons) {
  * @param mixed $plugin_array
  * @return array
  */
-function woocommerce_add_shortcode_tinymce_plugin($plugin_array) {
-	$plugin_array['WooCommerceShortcodes'] = plugin_dir_url( __FILE__ ) . 'includes/admin/editor_plugin.js';
+function ls_add_shortcode_tinymce_plugin($plugin_array) {
+	$plugin_array['LightShortcodes'] = plugin_dir_url( __FILE__ ) . 'includes/admin/editor_plugin.js';
 	return $plugin_array;
 }
 
@@ -102,12 +102,12 @@ function woocommerce_add_shortcode_tinymce_plugin($plugin_array) {
  * @param mixed $ver
  * @return int
  */
-function woocommerce_refresh_mce( $ver ) {
+function ls_refresh_mce( $ver ) {
 	$ver += 3;
 	return $ver;
 }
 
-
+add_filter( 'tiny_mce_version', 'ls_refresh_mce' );
 
 
 
@@ -122,6 +122,7 @@ function woocommerce_refresh_mce( $ver ) {
 
 
 include('shortcodes.php'); 
+include('gpp-shortcodes.php');
  
 
 ?>

@@ -1,26 +1,20 @@
 <?php
 
 $strings = 'tinyMCE.addI18n({' . _WP_Editors::$mce_locale . ':{
-    woocommerce:{
-        insert: "' . esc_js( __( 'Insert Shortcode', 'woocommerce' ) ) . '",
-        price_button: "' . esc_js( __( 'Product price/cart button', 'woocommerce' ) ) . '",
-        product_by_sku: "' . esc_js( __( 'Product by SKU/ID', 'woocommerce' ) ) . '",
-        products_by_sku: "' . esc_js( __( 'Products by SKU/ID', 'woocommerce' ) ) . '",
-        product_categories: "' . esc_js( __( 'Product categories', 'woocommerce' ) ) . '",
-        products_by_cat_slug: "' . esc_js( __( 'Products by category slug', 'woocommerce' ) ) . '",
-        recent_products: "' . esc_js( __( 'Recent products', 'woocommerce' ) ) . '",
-        featured_products: "' . esc_js( __( 'Featured products', 'woocommerce' ) ) . '",
-        shop_messages: "' . esc_js( __( 'Shop Messages', 'woocommerce' ) ) . '",
-        pages: "' . esc_js( __( 'Pages', 'woocommerce' ) ) . '",
-        cart: "' . esc_js( __( 'Cart', 'woocommerce' ) ) . '",
-        checkout: "' . esc_js( __( 'Checkout', 'woocommerce' ) ) . '",
-        order_tracking: "' . esc_js( __( 'Order tracking', 'woocommerce' ) ) . '",
-        my_account: "' . esc_js( __( 'My Account', 'woocommerce' ) ) . '",
-        edit_address: "' . esc_js( __( 'Edit Address', 'woocommerce' ) ) . '",
-        change_password: "' . esc_js( __( 'Change Password', 'woocommerce' ) ) . '",
-        view_order: "' . esc_js( __( 'View Order', 'woocommerce' ) ) . '",
-        pay: "' . esc_js( __( 'Pay', 'woocommerce' ) ) . '",
-        thankyou: "' . esc_js( __( 'Thankyou', 'woocommerce' ) ) . '",
-        hello_world: "' . esc_js( __( 'Hello World', 'woocommerce' ) ) . '",
+    ls_shortcodes:{
+        insert: "' . esc_js( __( 'Insert Shortcode', 'ls_shortcode' ) ) . '",
+        hello_world: "' . esc_js( __( 'Hello World', 'ls_shortcode' ) ) . '",
+		ls_button: "' . esc_js( __( 'Button', 'ls_shortcode' ) ) . '",
+		ls_box: "' . esc_js( __( 'Box', 'ls_shortcode' ) ) . '",
+		ls_icon: "' . esc_js( __( 'Icon', 'ls_shortcode' ) ) . '",
+		ls_highlight: "' . esc_js( __( 'Highlight', 'ls_shortcode' ) ) . '",
+		ls_divider: "' . esc_js( __( 'Divider', 'ls_shortcode' ) ) . '",
+		ls_accordion: "' . esc_js( __( 'Accordion', 'ls_shortcode' ) ) . '",
+		ls_toggle: "' . esc_js( __( 'Toggle', 'ls_shortcode' ) ) . '",
+		ls_tabs: "' . esc_js( __( 'Tabs', 'ls_shortcode' ) ) . '",
+		ls_googlemaps: "' . esc_js( __( 'Google Maps', 'ls_shortcode' ) ) . '",
+		ls_pricingtables: "' . esc_js( __( 'Pricing Tables', 'ls_shortcode' ) ) . '",
+		ls_grids: "' . esc_js( __( 'Grids', 'ls_shortcode' ) ) . '",
+		ls_grids_two_cols: "' . esc_js( __( 'Two Columns', 'ls_shortcode' ) ) . '",
     }
 }})';

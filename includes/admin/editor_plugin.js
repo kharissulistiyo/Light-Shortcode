@@ -2,7 +2,7 @@
 	function(){
 
 		tinymce.create(
-			"tinymce.plugins.WooCommerceShortcodes",
+			"tinymce.plugins.LightShortcodes",
 			{
 				init: function(d,e) {},
 				createControl:function(d,e)
@@ -10,43 +10,56 @@
 
 					var ed = tinymce.activeEditor;
 
-					if(d=="woocommerce_shortcodes_button"){
+					if(d=="ls_shortcodes_button"){
 
-						d=e.createMenuButton( "woocommerce_shortcodes_button",{
-							title: ed.getLang('woocommerce.insert'),
+						d=e.createMenuButton( "ls_shortcodes_button",{
+							title: ed.getLang('ls_shortcodes.insert'),
 							icons: false
 							});
 
 							var a=this;d.onRenderMenu.add(function(c,b){
 
-								a.addImmediate(b, ed.getLang('woocommerce.hello_world'),"[hello_world]" );
-								a.addImmediate(b, ed.getLang('woocommerce.order_tracking'),"[woocommerce_order_tracking]" );
-								a.addImmediate(b, ed.getLang('woocommerce.price_button'), '[add_to_cart id="" sku=""]');
-								a.addImmediate(b, ed.getLang('woocommerce.product_by_sku'), '[product id="" sku=""]');
-								a.addImmediate(b, ed.getLang('woocommerce.products_by_sku'), '[products ids="" skus=""]');
-								a.addImmediate(b, ed.getLang('woocommerce.product_categories'), '[product_categories number=""]');
-								a.addImmediate(b, ed.getLang('woocommerce.products_by_cat_slug'), '[product_category category="" per_page="12" columns="4" orderby="date" order="desc"]');
-
-								b.addSeparator();
-
-								a.addImmediate(b, ed.getLang('woocommerce.recent_products'), '[recent_products per_page="12" columns="4" orderby="date" order="desc"]');
-								a.addImmediate(b, ed.getLang('woocommerce.featured_products'), '[featured_products per_page="12" columns="4" orderby="date" order="desc"]');
-
-								b.addSeparator();
-
-								a.addImmediate(b, ed.getLang('woocommerce.shop_messages'), '[woocommerce_messages]');
-
-								b.addSeparator();
-
-								c=b.addMenu({title:ed.getLang('woocommerce.pages')});
-										a.addImmediate(c, ed.getLang('woocommerce.cart'),"[woocommerce_cart]" );
-										a.addImmediate(c, ed.getLang('woocommerce.checkout'),"[woocommerce_checkout]" );
-										a.addImmediate(c, ed.getLang('woocommerce.my_account'),"[woocommerce_my_account]" );
-										a.addImmediate(c, ed.getLang('woocommerce.edit_address'),"[woocommerce_edit_address]" );
-										a.addImmediate(c, ed.getLang('woocommerce.change_password'),"[woocommerce_change_password]" );
-										a.addImmediate(c, ed.getLang('woocommerce.view_order'),"[woocommerce_view_order]" );
-										a.addImmediate(c, ed.getLang('woocommerce.pay'),"[woocommerce_pay]" );
-										a.addImmediate(c, ed.getLang('woocommerce.thankyou'),"[woocommerce_thankyou]" );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.hello_world'),"[hello_world]" );
+								
+								
+								
+								/** Working shortcode starting here 
+								* default: a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'' );
+								* --------------------------------------- */
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'[gpp_button color="blue" url="#" title="themes" icon_left="twitter" target="_blank" size="large" display="block"]Button Text[/gpp_button]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_box'),'[gpp_box color="green" width="50%" text_align="left" margin_bottom="50px" margin_top="50px"]Alert Box Text[/gpp_box]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_icon'),'[gpp_icon type="image"]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_highlight'),'[gpp_highlight color="green"]text to highlight[/gpp_highlight]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_divider'),'[gpp_divider type="dashed" color="green"]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_accordion'),'[gpp_accordion][gpp_accordion_section title="Section #1"]Section 1 text[/gpp_accordion_section][gpp_accordion_section title="Section #2"]Section 2 text[/gpp_accordion_section][gpp_accordion_section title="Section #3"]Section 3 text[/gpp_accordion_section][/gpp_accordion]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_toggle'),'[gpp_toggle title="Toggle Title"]Toggle text[/gpp_toggle]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_tabs'),'[gpp_tabgroup][gpp_tab title="Tab #1"]Tab 1 text [/gpp_tab][gpp_tab title="Tab #2"]Tab 2 text[/gpp_tab][/gpp_tabgroup]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_googlemaps'),'[gpp_googlemap location="new york,usa" zoom="5" title="New York" height="500"]' );
+								
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_pricingtables'),'[gpp_pricing plan="Premium" cost="$200" per="per month" button_url="#" button_text="Sign Up" button_color="green" button_target="self" button_rel="nofollow"] <li>Item 1</li> <li>Item 2</li> [/gpp_pricing]' );
+								
+								
+								c=b.addMenu({title:ed.getLang('ls_shortcodes.ls_grids')});
+									a.addImmediate(c, ed.getLang('ls_shortcodes.ls_grids_two_cols'),"[one_half_first] This is the first column [/one_half_first][one_half_last] This is the first column [/one_half_last]" );
+									
+								
+								// a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'' );
+								
+								
+								/** End of working shortcode button
+								* --------------------------------------- */
+								
+								// b.addSeparator(); // Used to create a line separator
+								
 
 							});
 						return d
@@ -61,6 +74,6 @@
 			}
 		);
 
-		tinymce.PluginManager.add( "WooCommerceShortcodes", tinymce.plugins.WooCommerceShortcodes);
+		tinymce.PluginManager.add( "LightShortcodes", tinymce.plugins.LightShortcodes);
 	}
 )();
