@@ -51,47 +51,47 @@ add_action( 'init', 'ls_base_unautop' );
 function ls_shortcodes() {
 
 	add_filter( 'the_content', 'shortcode_unautop' );
+	
+	add_shortcode( 'one_third_first', 'ls_base_grid_4_first' );
+	add_shortcode( 'one_third', 'ls_base_grid_4' );
+	add_shortcode( 'one_third_last', 'ls_base_grid_4_last' );
 
-	add_shortcode( 'one_third_first', 'gpp_base_grid_4_first' );
-	add_shortcode( 'one_third', 'gpp_base_grid_4' );
-	add_shortcode( 'one_third_last', 'gpp_base_grid_4_last' );
+	add_shortcode( 'two_thirds_first', 'ls_base_grid_8_first' );
+	add_shortcode( 'two_thirds', 'ls_base_grid_8' );
+	add_shortcode( 'two_thirds_last', 'ls_base_grid_8_last' );
 
-	add_shortcode( 'two_thirds_first', 'gpp_base_grid_8_first' );
-	add_shortcode( 'two_thirds', 'gpp_base_grid_8' );
-	add_shortcode( 'two_thirds_last', 'gpp_base_grid_8_last' );
+	add_shortcode( 'one_half_first', 'ls_base_grid_6_first' );
+	add_shortcode( 'one_half', 'ls_base_grid_6' );
+	add_shortcode( 'one_half_last', 'ls_base_grid_6_last' );
 
-	add_shortcode( 'one_half_first', 'gpp_base_grid_6_first' );
-	add_shortcode( 'one_half', 'gpp_base_grid_6' );
-	add_shortcode( 'one_half_last', 'gpp_base_grid_6_last' );
+	add_shortcode( 'one_fourth_first', 'ls_base_grid_3_first' );
+	add_shortcode( 'one_fourth', 'ls_base_grid_3' );
+	add_shortcode( 'one_fourth_last', 'ls_base_grid_3_last' );
 
-	add_shortcode( 'one_fourth_first', 'gpp_base_grid_3_first' );
-	add_shortcode( 'one_fourth', 'gpp_base_grid_3' );
-	add_shortcode( 'one_fourth_last', 'gpp_base_grid_3_last' );
+	add_shortcode( 'three_fourths_first', 'ls_base_grid_9_first' );
+	add_shortcode( 'three_fourths', 'ls_base_grid_9' );
+	add_shortcode( 'three_fourths_last', 'ls_base_grid_9_last' );
 
-	add_shortcode( 'three_fourths_first', 'gpp_base_grid_9_first' );
-	add_shortcode( 'three_fourths', 'gpp_base_grid_9' );
-	add_shortcode( 'three_fourths_last', 'gpp_base_grid_9_last' );
+	add_shortcode( 'one_sixth_first', 'ls_base_grid_2_first' );
+	add_shortcode( 'one_sixth', 'ls_base_grid_2' );
+	add_shortcode( 'one_sixth_last', 'ls_base_grid_2_last' );
 
-	add_shortcode( 'one_sixth_first', 'gpp_base_grid_2_first' );
-	add_shortcode( 'one_sixth', 'gpp_base_grid_2' );
-	add_shortcode( 'one_sixth_last', 'gpp_base_grid_2_last' );
-
-	add_shortcode( 'five_sixth_first', 'gpp_base_grid_10_first' );
-	add_shortcode( 'five_sixth', 'gpp_base_grid_10' );
-	add_shortcode( 'five_sixth_last', 'gpp_base_grid_10_last' );
-
-	add_shortcode( 'gpp_button', 'gpp_button_shortcode');
-	add_shortcode( 'gpp_icon', 'gpp_icon_shortcode' );
-	add_shortcode( 'gpp_box', 'gpp_box_shortcode' );
-	add_shortcode( 'gpp_highlight', 'gpp_highlight_shortcode' );
-	add_shortcode( 'gpp_divider', 'gpp_divider_shortcode' );
-	add_shortcode( 'gpp_toggle', 'gpp_toggle_shortcode' );
-	add_shortcode( 'gpp_googlemap', 'gpp_shortcode_googlemaps' );
-	add_shortcode( 'gpp_accordion', 'gpp_accordion_main_shortcode' );
-	add_shortcode( 'gpp_accordion_section', 'gpp_accordion_section_shortcode' );
-	add_shortcode( 'gpp_pricing', 'gpp_pricing_shortcode' );
-	add_shortcode( 'gpp_tabgroup', 'gpp_tabgroup_shortcode' );
-	add_shortcode( 'gpp_tab', 'gpp_tab_shortcode' );
+	add_shortcode( 'five_sixth_first', 'ls_base_grid_10_first' );
+	add_shortcode( 'five_sixth', 'ls_base_grid_10' );
+	add_shortcode( 'five_sixth_last', 'ls_base_grid_10_last' );
+	
+	add_shortcode( 'ls_button', 'ls_button_shortcode');
+	add_shortcode( 'ls_icon', 'ls_icon_shortcode' );
+	add_shortcode( 'ls_box', 'ls_box_shortcode' );
+	add_shortcode( 'ls_highlight', 'ls_highlight_shortcode' );
+	add_shortcode( 'ls_divider', 'ls_divider_shortcode' );
+	add_shortcode( 'ls_toggle', 'ls_toggle_shortcode' );
+	add_shortcode( 'ls_googlemap', 'ls_shortcode_googlemaps' );
+	add_shortcode( 'ls_accordion', 'ls_accordion_main_shortcode' );
+	add_shortcode( 'ls_accordion_section', 'ls_accordion_section_shortcode' );
+	add_shortcode( 'ls_pricing', 'ls_pricing_shortcode' );
+	add_shortcode( 'ls_tabgroup', 'ls_tabgroup_shortcode' );
+	add_shortcode( 'ls_tab', 'ls_tab_shortcode' );
 
 	// Long posts should require a higher limit, see http://core.trac.wordpress.org/ticket/8553
 	@ini_set( 'pcre.backtrack_limit', 500000 );
@@ -103,88 +103,88 @@ add_action( 'wp_head', 'ls_shortcodes' );
  * Columns Shortcodes
  */
 
-function gpp_base_grid_4_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_4 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_4_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_4 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_4( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_4">' . do_shortcode($content) . '</div>';
+function ls_base_grid_4( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_4">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_4_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_4 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_4_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_4 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_8_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_8 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_8_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_8 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_8( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_8">' . do_shortcode($content) . '</div>';
+function ls_base_grid_8( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_8">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_8_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_8 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_8_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_8 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_6_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_6 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_6_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_6 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_6( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_6">' . do_shortcode($content) . '</div>';
+function ls_base_grid_6( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_6">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_6_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_6 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_6_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_6 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_3_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_3 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_3_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_3 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_3( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_3">' . do_shortcode($content) . '</div>';
+function ls_base_grid_3( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_3">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_3_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_3 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_3_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_3 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_9_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_9 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_9_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_9 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_9( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_9">' . do_shortcode($content) . '</div>';
+function ls_base_grid_9( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_9">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_9_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_9 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_9_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_9 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_2_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_2 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_2_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_2 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_2( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_2">' . do_shortcode($content) . '</div>';
+function ls_base_grid_2( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_2">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_2_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_2 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_2_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_2 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
-function gpp_base_grid_10_first( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_10 alpha">' . do_shortcode($content) . '</div>';
+function ls_base_grid_10_first( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_10 alpha">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_10( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_10">' . do_shortcode($content) . '</div>';
+function ls_base_grid_10( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_10">' . do_shortcode($content) . '</div>';
 }
 
-function gpp_base_grid_10_last( $atts, $content = null ) {
-   return '<div class="gpp-sc-grid_10 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
+function ls_base_grid_10_last( $atts, $content = null ) {
+   return '<div class="ls-sc-grid_10 omega">' . do_shortcode($content) . '</div><div class="clear"></div>';
 }
 
 /**
@@ -193,8 +193,8 @@ function gpp_base_grid_10_last( $atts, $content = null ) {
  *
  */
 
-if ( !function_exists( 'gpp_button_shortcode' ) ) {
-	function gpp_button_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_button_shortcode' ) ) {
+	function ls_button_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'color' => 'blue',
 			'url' => '#',
@@ -211,11 +211,11 @@ if ( !function_exists( 'gpp_button_shortcode' ) ) {
 		$rel = ( $rel ) ? 'rel="' . $rel . '"' : NULL;
 
 		$button = NULL;
-		$button .= '<a href="' . $url . '" class="gpp-sc-button ' . $color . ' ' . $class . ' ' . $size . ' ' . $display . '" target="_' . $target . '" title="' . $title . '" rel="' . $rel . '">';
-			$button .= '<span class="gpp-sc-button-inner">';
-				if ( $icon_left ) $button .= '<span class="gpp-sc-button-icon-left gpp-sc-genericon gpp-sc-genericon-'. $icon_left .'"></span>';
+		$button .= '<a href="' . $url . '" class="ls-sc-button ' . $color . ' ' . $class . ' ' . $size . ' ' . $display . '" target="_' . $target . '" title="' . $title . '" rel="' . $rel . '">';
+			$button .= '<span class="ls-sc-button-inner">';
+				if ( $icon_left ) $button .= '<span class="ls-sc-button-icon-left gpp-sc-genericon gpp-sc-genericon-'. $icon_left .'"></span>';
 				$button .= $content;
-				if ( $icon_right ) $button .= '<span class="gpp-sc-button-icon-right gpp-sc-genericon gpp-sc-genericon-'. $icon_right .'"></span>';
+				if ( $icon_right ) $button .= '<span class="ls-sc-button-icon-right gpp-sc-genericon gpp-sc-genericon-'. $icon_right .'"></span>';
 			$button .= '</span>';
 		$button .= '</a>';
 		return $button;
@@ -228,8 +228,8 @@ if ( !function_exists( 'gpp_button_shortcode' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_icon_shortcode' ) ) {
-	function gpp_icon_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_icon_shortcode' ) ) {
+	function ls_icon_shortcode( $atts, $content = null ) {
 		extract(shortcode_atts(array(
 			"type" => 'twitter',
 			"size"   => '32px',
@@ -247,8 +247,8 @@ if ( !function_exists( 'gpp_icon_shortcode' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_box_shortcode' ) ) {
-	function gpp_box_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_box_shortcode' ) ) {
+	function ls_box_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'color' => 'black',
 			'float' => 'left',
@@ -268,7 +268,7 @@ if ( !function_exists( 'gpp_box_shortcode' ) ) {
 			}
 
 		  $alert_content = '';
-		  $alert_content .= '<div class="gpp-sc-box ' . $color . ' align' . $float . ' ' . $class . '" style="text-align:' . $text_align . '; width:' . $width . ';' . $style_attr . '">';
+		  $alert_content .= '<div class="ls-sc-box ' . $color . ' align' . $float . ' ' . $class . '" style="text-align:' . $text_align . '; width:' . $width . ';' . $style_attr . '">';
 		  $alert_content .= ' '. do_shortcode($content) .'</div>';
 		  return $alert_content;
 	}
@@ -280,14 +280,14 @@ if ( !function_exists( 'gpp_box_shortcode' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_highlight_shortcode' ) ) {
-	function gpp_highlight_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_highlight_shortcode' ) ) {
+	function ls_highlight_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'color'	=> 'yellow',
 			'class'	=> '',
 		  ),
 		  $atts ) );
-		  return '<span class="gpp-sc-highlight ' . $color . ' ' . $class . '">' . do_shortcode( $content ) . '</span>';
+		  return '<span class="ls-sc-highlight ' . $color . ' ' . $class . '">' . do_shortcode( $content ) . '</span>';
 
 	}
 }
@@ -298,8 +298,8 @@ if ( !function_exists( 'gpp_highlight_shortcode' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_divider_shortcode' ) ) {
-	function gpp_divider_shortcode( $atts ) {
+if ( !function_exists( 'ls_divider_shortcode' ) ) {
+	function ls_divider_shortcode( $atts ) {
 		extract( shortcode_atts( array(
 			'style' => 'solid',
 			'color' => 'gray',
@@ -318,7 +318,7 @@ if ( !function_exists( 'gpp_divider_shortcode' ) ) {
 		} else {
 			$style_attr = NULL;
 		}
-	 return '<hr class="gpp-sc-divider ' . $style . ' ' . $color . ' ' . $class . '" ' . $style_attr . ' />';
+	 return '<hr class="ls-sc-divider ' . $style . ' ' . $color . ' ' . $class . '" ' . $style_attr . ' />';
 	}
 }
 
@@ -328,14 +328,14 @@ if ( !function_exists( 'gpp_divider_shortcode' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_toggle_shortcode' ) ) {
-	function gpp_toggle_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_toggle_shortcode' ) ) {
+	function ls_toggle_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 			'title' => 'Toggle Title',
 			'class' => '',
 		), $atts ) );
 
-		return '<div class="gpp-sc-toggle ' . $class . '"><h3 class="gpp-sc-toggle-trigger">' . $title . '</h3><div class="gpp-sc-toggle-container">' . do_shortcode($content) . '</div></div>';
+		return '<div class="ls-sc-toggle ' . $class . '"><h3 class="ls-sc-toggle-trigger">' . $title . '</h3><div class="ls-sc-toggle-container">' . do_shortcode($content) . '</div></div>';
 	}
 
 }
@@ -347,27 +347,27 @@ if ( !function_exists( 'gpp_toggle_shortcode' ) ) {
  */
 
 // Main
-if ( !function_exists( 'gpp_accordion_main_shortcode' ) ) {
-	function gpp_accordion_main_shortcode( $atts, $content = null  ) {
+if ( !function_exists( 'ls_accordion_main_shortcode' ) ) {
+	function ls_accordion_main_shortcode( $atts, $content = null  ) {
 
 		extract( shortcode_atts( array(
 			'class'	=> ''
 		), $atts ) );
 
 		// Display the accordion
-		return '<div class="gpp-sc-accordion ' . $class . '">' . do_shortcode($content) . '</div>';
+		return '<div class="ls-sc-accordion ' . $class . '">' . do_shortcode($content) . '</div>';
 	}
 }
 
 // Section
-if ( !function_exists( 'gpp_accordion_section_shortcode' ) ) {
-	function gpp_accordion_section_shortcode( $atts, $content = null  ) {
+if ( !function_exists( 'ls_accordion_section_shortcode' ) ) {
+	function ls_accordion_section_shortcode( $atts, $content = null  ) {
 		extract( shortcode_atts( array(
 			'title'	=> 'Title',
 			'class'	=> '',
 		), $atts ) );
 
-	   return '<h3 class="gpp-sc-accordion-trigger ' . $class . '"><a href="#">' . $title . '</a></h3><div>' . do_shortcode($content) . '</div>';
+	   return '<h3 class="ls-sc-accordion-trigger ' . $class . '"><a href="#">' . $title . '</a></h3><div>' . do_shortcode($content) . '</div>';
 	}
 
 }
@@ -377,8 +377,8 @@ if ( !function_exists( 'gpp_accordion_section_shortcode' ) ) {
  * @since 1.1
  *
  */
-if ( !function_exists( 'gpp_tabgroup_shortcode' ) ) {
-	function gpp_tabgroup_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_tabgroup_shortcode' ) ) {
+	function ls_tabgroup_shortcode( $atts, $content = null ) {
 
 		// Display Tabs
 		$defaults = array();
@@ -388,10 +388,10 @@ if ( !function_exists( 'gpp_tabgroup_shortcode' ) ) {
 		if( isset($matches[1]) ){ $tab_titles = $matches[1]; }
 		$output = '';
 		if( count($tab_titles) ){
-		    $output .= '<div id="gpp-sc-tab-'. rand(1, 100) .'" class="gpp-sc-tabs">';
-			$output .= '<ul class="ui-tabs-nav gpp-sc-clearfix">';
+		    $output .= '<div id="ls-sc-tab-'. rand(1, 100) .'" class="ls-sc-tabs">';
+			$output .= '<ul class="ui-tabs-nav ls-sc-clearfix">';
 			foreach( $tab_titles as $tab ){
-				$output .= '<li><a href="#gpp-sc-tab-'. sanitize_title( $tab[0] ) .'">' . $tab[0] . '</a></li>';
+				$output .= '<li><a href="#ls-sc-tab-'. sanitize_title( $tab[0] ) .'">' . $tab[0] . '</a></li>';
 			}
 		    $output .= '</ul>';
 		    $output .= do_shortcode( $content );
@@ -402,14 +402,14 @@ if ( !function_exists( 'gpp_tabgroup_shortcode' ) ) {
 		return $output;
 	}
 }
-if ( !function_exists( 'gpp_tab_shortcode' ) ) {
-	function gpp_tab_shortcode( $atts, $content = null ) {
+if ( !function_exists( 'ls_tab_shortcode' ) ) {
+	function ls_tab_shortcode( $atts, $content = null ) {
 		$defaults = array(
 			'title'	=> 'Tab Title',
 			'class'	=> ''
 		);
 		extract( shortcode_atts( $defaults, $atts ) );
-		return '<div id="gpp-sc-tab-' . sanitize_title( $title ) . '" class="tab-content ' . $class . '">' . do_shortcode( $content ) .'</div>';
+		return '<div id="ls-sc-tab-' . sanitize_title( $title ) . '" class="tab-content ' . $class . '">' . do_shortcode( $content ) .'</div>';
 	}
 
 }
@@ -420,8 +420,8 @@ if ( !function_exists( 'gpp_tab_shortcode' ) ) {
  * @since 1.1
  */
 
-if ( ! function_exists( 'gpp_shortcode_googlemaps' ) ) {
-	function gpp_shortcode_googlemaps( $atts, $content = null ) {
+if ( ! function_exists( 'ls_shortcode_googlemaps' ) ) {
+	function ls_shortcode_googlemaps( $atts, $content = null ) {
 
 		extract(shortcode_atts(array(
 				'title'		=> '',
@@ -452,8 +452,8 @@ if ( ! function_exists( 'gpp_shortcode_googlemaps' ) ) {
  *
  */
 
-if ( !function_exists( 'gpp_pricing_shortcode' ) ) {
-	function gpp_pricing_shortcode( $atts, $content = null  ) {
+if ( !function_exists( 'ls_pricing_shortcode' ) ) {
+	function ls_pricing_shortcode( $atts, $content = null  ) {
 
 		extract( shortcode_atts( array(
 			'color' => 'black',
@@ -475,20 +475,20 @@ if ( !function_exists( 'gpp_pricing_shortcode' ) ) {
 
 		//start content
 		$pricing_content ='';
-		$pricing_content .= '<div class="gpp-sc-pricing-table ' . $class . '">';
-		$pricing_content .= '<div class="gpp-sc-pricing ' . $featured_pricing . ' gpp-sc-column-' . $position . ' ' . $class . '">';
-			$pricing_content .= '<div class="gpp-sc-pricing-header '. $color .'">';
+		$pricing_content .= '<div class="ls-sc-pricing-table ' . $class . '">';
+		$pricing_content .= '<div class="ls-sc-pricing ' . $featured_pricing . ' gpp-sc-column-' . $position . ' ' . $class . '">';
+			$pricing_content .= '<div class="ls-sc-pricing-header '. $color .'">';
 				$pricing_content .= '<h5>' . $plan . '</h5>';
-				$pricing_content .= '<div class="gpp-sc-pricing-cost">' . $cost . '</div><div class="gpp-sc-pricing-per">' . $per . '</div>';
+				$pricing_content .= '<div class="ls-sc-pricing-cost">' . $cost . '</div><div class="ls-sc-pricing-per">' . $per . '</div>';
 			$pricing_content .= '</div>';
-			$pricing_content .= '<div class="gpp-sc-pricing-content">';
+			$pricing_content .= '<div class="ls-sc-pricing-content">';
 				$pricing_content .= '' . $content . '';
 			$pricing_content .= '</div>';
 			if( $button_url ) {
-				$pricing_content .= '<div class="gpp-sc-pricing-button"><a href="' . $button_url . '" class="gpp-sc-button ' . $button_color . '" target="_' . $button_target . '" rel="' . $button_rel . '"><span class="gpp-sc-button-inner">' . $button_text . '</span></a></div>';
+				$pricing_content .= '<div class="ls-sc-pricing-button"><a href="' . $button_url . '" class="ls-sc-button ' . $button_color . '" target="_' . $button_target . '" rel="' . $button_rel . '"><span class="ls-sc-button-inner">' . $button_text . '</span></a></div>';
 			}
 		$pricing_content .= '</div>';
-		$pricing_content .= '</div><div class="gpp-sc-clear-floats"></div>';
+		$pricing_content .= '</div><div class="ls-sc-clear-floats"></div>';
 		return $pricing_content;
 	}
 

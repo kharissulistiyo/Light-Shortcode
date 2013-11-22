@@ -1,13 +1,13 @@
 jQuery(document).ready(function($){
 	
 	// Accordion
-	$(".gpp-sc-accordion").accordion({heightStyle: "content"});
+	$(".ls-sc-accordion").accordion({heightStyle: "content"});
 	
 	// Toggle
-	$(".gpp-sc-toggle-trigger").click(function(){$(this).toggleClass("active").next().slideToggle("fast");return false; });
+	$(".ls-sc-toggle-trigger").click(function(){$(this).toggleClass("active").next().slideToggle("fast");return false; });
 	
 	// Tabs
-	$( ".gpp-sc-tabs" ).tabs();
+	$( ".ls-sc-tabs" ).tabs();
 	
 	// Google Maps
 	$('.googlemap').each( function() {

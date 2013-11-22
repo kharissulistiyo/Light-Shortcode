@@ -24,25 +24,25 @@
 								* default: a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'' );
 								* --------------------------------------- */
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'[gpp_button color="blue" url="#" title="themes" icon_left="twitter" target="_blank" size="large" display="block"]Button Text[/gpp_button]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'[ls_button color="blue" url="#" title="themes" icon_left="twitter" target="_blank" size="large" display="block"]Button Text[/ls_button]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_box'),'[gpp_box color="green" width="50%" text_align="left" margin_bottom="50px" margin_top="50px"]Alert Box Text[/gpp_box]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_box'),'[ls_box color="green" width="50%" text_align="left" margin_bottom="50px" margin_top="50px"]Alert Box Text[/ls_box]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_icon'),'[gpp_icon type="image"]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_icon'),'[ls_icon type="image"]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_highlight'),'[gpp_highlight color="green"]text to highlight[/gpp_highlight]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_highlight'),'[ls_highlight color="green"]text to highlight[/ls_highlight]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_divider'),'[gpp_divider type="dashed" color="green"]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_divider'),'[ls_divider type="dashed" color="green"]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_accordion'),'[gpp_accordion][gpp_accordion_section title="Section #1"]Section 1 text[/gpp_accordion_section][gpp_accordion_section title="Section #2"]Section 2 text[/gpp_accordion_section][gpp_accordion_section title="Section #3"]Section 3 text[/gpp_accordion_section][/gpp_accordion]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_accordion'),'[ls_accordion][ls_accordion_section title="Section #1"]Section 1 text[/ls_accordion_section][ls_accordion_section title="Section #2"]Section 2 text[/ls_accordion_section][ls_accordion_section title="Section #3"]Section 3 text[/ls_accordion_section][/ls_accordion]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_toggle'),'[gpp_toggle title="Toggle Title"]Toggle text[/gpp_toggle]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_toggle'),'[ls_toggle title="Toggle Title"]Toggle text[/ls_toggle]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_tabs'),'[gpp_tabgroup][gpp_tab title="Tab #1"]Tab 1 text [/gpp_tab][gpp_tab title="Tab #2"]Tab 2 text[/gpp_tab][/gpp_tabgroup]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_tabs'),'[ls_tabgroup][ls_tab title="Tab #1"]Tab 1 text [/ls_tab][ls_tab title="Tab #2"]Tab 2 text[/ls_tab][/ls_tabgroup]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_googlemaps'),'[gpp_googlemap location="new york,usa" zoom="5" title="New York" height="500"]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_googlemaps'),'[ls_googlemap location="new york,usa" zoom="5" title="New York" height="500"]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_pricingtables'),'[gpp_pricing plan="Premium" cost="$200" per="per month" button_url="#" button_text="Sign Up" button_color="green" button_target="self" button_rel="nofollow"] <li>Item 1</li> <li>Item 2</li> [/gpp_pricing]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_pricingtables'),'[ls_pricing plan="Premium" cost="$200" per="per month" button_url="#" button_text="Sign Up" button_color="green" button_target="self" button_rel="nofollow"] <li>Item 1</li> <li>Item 2</li> [/ls_pricing]' );
 								
 								
 								c=b.addMenu({title:ed.getLang('ls_shortcodes.ls_grids')});
