@@ -301,7 +301,7 @@ if ( !function_exists( 'ls_highlight_shortcode' ) ) {
 if ( !function_exists( 'ls_divider_shortcode' ) ) {
 	function ls_divider_shortcode( $atts ) {
 		extract( shortcode_atts( array(
-			'style' => 'solid',
+			'type' => 'solid',
 			'color' => 'gray',
 			'margin_top' => '20px',
 			'margin_bottom' => '20px',
@@ -318,7 +318,7 @@ if ( !function_exists( 'ls_divider_shortcode' ) ) {
 		} else {
 			$style_attr = NULL;
 		}
-	 return '<hr class="ls-sc-divider ' . $style . ' ' . $color . ' ' . $class . '" ' . $style_attr . ' />';
+	 return '<hr class="ls-sc-divider ' . $type . ' ' . $color . ' ' . $class . '" ' . $style_attr . ' />';
 	}
 }
 

@@ -199,24 +199,24 @@
 .ls-sc-box.yellow,
 .ls-sc-highlight.yellow,
 .ls-sc-pricing-header.yellow {
-  background-color: #f6bb42;
-  border-color: #f6bb42;
+  background-color: #edde45;
+  border-color: #edde45;
   color: #fff;
 }
 .ls-sc-button.green,
 .ls-sc-box.green,
 .ls-sc-highlight.green,
 .ls-sc-pricing-header.green {
-  background-color: #8cc152;
-  border-color: #8cc152;
+  background-color: #19dd89;
+  border-color: #19dd89;
   color: #fff;
 }
 .ls-sc-button.red,
 .ls-sc-box.red,
 .ls-sc-highlight.red,
 .ls-sc-pricing-header.red {
-  background-color: #da4453;
-  border-color: #da4453;
+  background-color: #ea3556;
+  border-color: #ea3556;
   color: #fff;
 }
 .ls-sc-button.pink,
@@ -231,24 +231,24 @@
 .ls-sc-box.black,
 .ls-sc-highlight.black,
 .ls-sc-pricing-header.black {
-  background-color: #434a54;
-  border-color: #434a54;
+  background-color: #282d31;
+  border-color: #282d31;
   color: #fff;
 }
 .ls-sc-button.blue,
 .ls-sc-box.blue,
 .ls-sc-highlight.blue,
 .ls-sc-pricing-header.blue {
-  background-color: #3bafda;
-  border-color: #3bafda;
+  background-color: #42a2ce;
+  border-color: #42a2ce;
   color: #fff;
 }
 .ls-sc-button.purple,
 .ls-sc-box.purple,
 .ls-sc-highlight.purple,
 .ls-sc-pricing-header.purple {
-  background-color: #967adc;
-  border-color: #967adc;
+  background-color: #8e44ad;
+  border-color: #8e44ad;
   color: #fff;
 }
 .ls-sc-pricing-header.grey h5 {
@@ -257,18 +257,18 @@
   color: #fff;
 }
 .ls-sc-pricing-header.yellow h5 {
-  background-color: #f6bb42;
-  border-color: #f6bb42;
+  background-color: #edde45;
+  border-color: #edde45;
   color: #fff;
 }
 .ls-sc-pricing-header.green h5 {
-  background-color: #8cc152;
-  border-color: #8cc152;
+  background-color: #19dd89;
+  border-color: #19dd89;
   color: #fff;
 }
 .ls-sc-pricing-header.red h5 {
-  background-color: #da4453;
-  border-color: #da4453;
+  background-color: #ea3556;
+  border-color: #ea3556;
   color: #fff;
 }
 .ls-sc-pricing-header.pink h5 {
@@ -277,18 +277,18 @@
   color: #fff;
 }
 .ls-sc-pricing-header.black h5 {
-  background-color: #434a54;
-  border-color: #434a54;
+  background-color: #282d31;
+  border-color: #282d31;
   color: #fff;
 }
 .ls-sc-pricing-header.blue h5 {
-  background-color: #3bafda;
-  border-color: #3bafda;
+  background-color: #42a2ce;
+  border-color: #42a2ce;
   color: #fff;
 }
 .ls-sc-pricing-header.purple h5 {
-  background-color: #967adc;
-  border-color: #967adc;
+  background-color: #8e44ad;
+  border-color: #8e44ad;
   color: #fff;
 }
 /*  Alert Boxes  */
@@ -343,28 +343,28 @@
   border-bottom: 1px solid #eee;
 }
 .ls-sc-divider.yellow {
-  border-color: #f6bb42;
+  border-color: #edde45;
 }
 .ls-sc-divider.green {
-  border-color: #8cc152;
+  border-color: #19dd89;
 }
 .ls-sc-divider.red {
-  border-color: #da4453;
+  border-color: #ea3556;
 }
 .ls-sc-divider.pink {
   border-color: #d770ad;
 }
 .ls-sc-divider.black {
-  border-color: #434a54;
+  border-color: #282d31;
 }
 .ls-sc-divider.blue {
-  border-color: #3bafda;
+  border-color: #42a2ce;
 }
 .ls-sc-divider.gray {
   border-color: #cccccc;
 }
 .ls-sc-divider.purple {
-  border-color: #967adc;
+  border-color: #8e44ad;
 }
 /* Toggle
 ================================================== */
