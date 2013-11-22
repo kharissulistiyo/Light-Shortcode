@@ -32,14 +32,6 @@ function ls_add_shortcode_button() {
 		wp_enqueue_style( 'light-shortcodes-admin', plugin_dir_url( __FILE__ ) . 'includes/admin/light-shortcodes-admin.css' );
 	}
 		
-		
-	// Frontend style	
-	
-	if(!is_admin()){
-		wp_enqueue_style( 'light-shortcodes', plugin_dir_url( __FILE__ ) . 'includes/frontend/light-shortcodes.css' );
-	}
-	
-	
 }
 
 add_action( 'init', 'ls_add_shortcode_button' );
@@ -122,7 +114,6 @@ add_filter( 'tiny_mce_version', 'ls_refresh_mce' );
 
 
 include('shortcodes.php'); 
-include('gpp-shortcodes.php');
  
 
 ?>
