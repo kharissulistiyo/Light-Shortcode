@@ -3,7 +3,6 @@
 $strings = 'tinyMCE.addI18n({' . _WP_Editors::$mce_locale . ':{
     ls_shortcodes:{
         insert: "' . esc_js( __( 'Insert Shortcode', 'ls_shortcode' ) ) . '",
-        hello_world: "' . esc_js( __( 'Hello World', 'ls_shortcode' ) ) . '",
 		ls_button: "' . esc_js( __( 'Button', 'ls_shortcode' ) ) . '",
 		ls_box: "' . esc_js( __( 'Box', 'ls_shortcode' ) ) . '",
 		ls_icon: "' . esc_js( __( 'Icon', 'ls_shortcode' ) ) . '",
@@ -16,5 +15,8 @@ $strings = 'tinyMCE.addI18n({' . _WP_Editors::$mce_locale . ':{
 		ls_pricingtables: "' . esc_js( __( 'Pricing Tables', 'ls_shortcode' ) ) . '",
 		ls_grids: "' . esc_js( __( 'Grids', 'ls_shortcode' ) ) . '",
 		ls_grids_two_cols: "' . esc_js( __( 'Two Columns', 'ls_shortcode' ) ) . '",
+		ls_grids_three_cols: "' . esc_js( __( 'Three Columns', 'ls_shortcode' ) ) . '",
+		ls_grids_four_cols: "' . esc_js( __( 'Four Columns', 'ls_shortcode' ) ) . '",
+		ls_grids_six_cols: "' . esc_js( __( 'Six Columns', 'ls_shortcode' ) ) . '",
     }
 }})';

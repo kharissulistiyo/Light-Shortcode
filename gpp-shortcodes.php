@@ -3,18 +3,18 @@
 /**
 * Plugin constants
 */
-function gpp_shortcodes_init() {
-	define ( 'GPP_SHORTCODES_PLUGIN_URL',WP_PLUGIN_URL.'/'.dirname(plugin_basename(__FILE__)).'' );
-	define ( 'GPP_SHORTCODES_PLUGIN_DIR',WP_PLUGIN_DIR.'/'.dirname(plugin_basename(__FILE__)).'' );
+function ls_shortcodes_init() {
+	define ( 'LS_SHORTCODES_PLUGIN_URL',WP_PLUGIN_URL.'/'.dirname(plugin_basename(__FILE__)).'' );
+	define ( 'LS_SHORTCODES_PLUGIN_DIR',WP_PLUGIN_DIR.'/'.dirname(plugin_basename(__FILE__)).'' );
 }
-add_action( 'init', 'gpp_shortcodes_init' );
+add_action( 'init', 'ls_shortcodes_init' );
 
 /**
 * Add the stylesheet
 */
-function gpp_shortcodes_stylesheet() {
-    $gpp_shortcodes_style = GPP_SHORTCODES_PLUGIN_URL . '/gpp-shortcodes.css';
-    $gpp_shortcodes_file = GPP_SHORTCODES_PLUGIN_DIR . '/gpp-shortcodes.css';
+function ls_shortcodes_stylesheet() {
+    $gpp_shortcodes_style = LS_SHORTCODES_PLUGIN_URL . '/gpp-shortcodes.css';
+    $gpp_shortcodes_file = LS_SHORTCODES_PLUGIN_DIR . '/gpp-shortcodes.css';
     if ( file_exists($gpp_shortcodes_file) ) {
         wp_register_style( 'gpp_shortcodes', $gpp_shortcodes_style );
         wp_enqueue_style( 'gpp_shortcodes');
@@ -33,22 +33,22 @@ function gpp_shortcodes_stylesheet() {
 	wp_enqueue_script( 'gpp_sc_scripts' );
 	wp_enqueue_script( 'gpp_sc_googlemap_api' );
 }
-add_action( 'wp_enqueue_scripts', 'gpp_shortcodes_stylesheet' );
+add_action( 'wp_enqueue_scripts', 'ls_shortcodes_stylesheet' );
 
 
 /**
 * Don't auto-p wrap shortcodes that stand alone
 */
-function gpp_base_unautop() {
+function ls_base_unautop() {
 	add_filter( 'the_content', 'shortcode_unautop' );
 }
-add_action( 'init', 'gpp_base_unautop' );
+add_action( 'init', 'ls_base_unautop' );
 
 
 /**
 * Add the shortcodes
 */
-function gpp_shortcodes() {
+function ls_shortcodes() {
 
 	add_filter( 'the_content', 'shortcode_unautop' );
 
@@ -96,7 +96,7 @@ function gpp_shortcodes() {
 	// Long posts should require a higher limit, see http://core.trac.wordpress.org/ticket/8553
 	@ini_set( 'pcre.backtrack_limit', 500000 );
 }
-add_action( 'wp_head', 'gpp_shortcodes' );
+add_action( 'wp_head', 'ls_shortcodes' );
 
 
 /**

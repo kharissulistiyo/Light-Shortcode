@@ -19,9 +19,6 @@
 
 							var a=this;d.onRenderMenu.add(function(c,b){
 
-								a.addImmediate(b, ed.getLang('ls_shortcodes.hello_world'),"[hello_world]" );
-								
-								
 								
 								/** Working shortcode starting here 
 								* default: a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'' );
@@ -50,6 +47,11 @@
 								
 								c=b.addMenu({title:ed.getLang('ls_shortcodes.ls_grids')});
 									a.addImmediate(c, ed.getLang('ls_shortcodes.ls_grids_two_cols'),"[one_half_first] This is the first column [/one_half_first][one_half_last] This is the first column [/one_half_last]" );
+									a.addImmediate(c, ed.getLang('ls_shortcodes.ls_grids_three_cols'),'[one_third_first] This is the first column [/one_third_first][one_third] This is the second column [/one_third][one_third_last] This is the third and last column [/one_third_last]' );
+									
+									a.addImmediate(c, ed.getLang('ls_shortcodes.ls_grids_four_cols'),'[one_fourth_first] This is the first column [/one_fourth_first][one_fourth] This is the second column [/one_fourth][one_fourth] This is the third column [/one_fourth][one_fourth_last] This is the fourth and last column [/one_fourth_last]' );
+									
+									a.addImmediate(c, ed.getLang('ls_shortcodes.ls_grids_six_cols'),'[one_sixth_first] This is the first column [/one_sixth_first][one_sixth] This is the second column [/one_sixth][one_sixth] This is the third column [/one_sixth][one_sixth] This is the fourth column [/one_sixth][one_sixth] This is the fifth column [/one_sixth][one_sixth_last] This is the sixth and last column [/one_sixth_last]' );
 									
 								
 								// a.addImmediate(b, ed.getLang('ls_shortcodes.ls_button'),'' );
