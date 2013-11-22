@@ -32,3 +32,7 @@ Author URI: http://kharissulistiyo.github.io
 * Pricing Table
 * Tabs
 * Grid
+
+### Screenshot
+
+<img src="https://raw.github.com/kharissulistiyo/Light-Shortcode/master/screenshot-1.png" alt="Buttons" />
