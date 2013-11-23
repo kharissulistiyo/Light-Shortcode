@@ -42,7 +42,7 @@
 								
 								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_googlemaps'),'[ls_googlemap location="new york,usa" zoom="5" title="New York" height="500"]' );
 								
-								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_pricingtables'),'[ls_pricing plan="Premium" cost="$200" per="per month" button_url="#" button_text="Sign Up" button_color="green" button_target="self" button_rel="nofollow"] <li>Item 1</li> <li>Item 2</li> [/ls_pricing]' );
+								a.addImmediate(b, ed.getLang('ls_shortcodes.ls_pricingtables'),'[ls_pricing plan="Premium" cost="$200" per="per month" button_url="#" button_text="Sign Up" color="green" button_color="green" button_target="self" button_rel="nofollow"] <li>Item 1</li> <li>Item 2</li> [/ls_pricing]' );
 								
 								
 								c=b.addMenu({title:ed.getLang('ls_shortcodes.ls_grids')});
