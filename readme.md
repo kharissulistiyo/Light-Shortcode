@@ -7,9 +7,9 @@ TinyMCE Shortcode Plugin for WordPress
 /*
 Plugin Name: Light Shortcode
 
-Plugin URI: http://kharissulistiyo.github.io
+Plugin URI: https://github.com/kharissulistiyo/Light-Shortcode
 
-Description: Kick-ass and tinyMCE WordPress shortcode
+Description: Kick-ass tinyMCE WordPress shortcodes: Button, Icon, Box, Highlight, Divider, Toggle, Google Map, Accordion, Pricing Table, Tabs, and Grid.
 
 Author: Kharis Sulistiyono
 
@@ -33,6 +33,13 @@ Author URI: http://kharissulistiyo.github.io
 * Tabs
 * Grid
 
-### Screenshot
+### Screenshots
+
+<img src="https://raw.github.com/kharissulistiyo/Light-Shortcode/master/screenshot-2.png" alt="Shortcode Menu" />
+
+<p>Shortcode tinyMCE Menu</p>
+
 
 <img src="https://raw.github.com/kharissulistiyo/Light-Shortcode/master/screenshot-1.png" alt="Buttons" />
+
+<p>Example Shortcodes</p>
