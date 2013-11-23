@@ -3,6 +3,7 @@
 TinyMCE Shortcode Plugin for WordPress
 
 ### Plugin Info
+---
 
 /*
 Plugin Name: Light Shortcode
@@ -18,8 +19,14 @@ Version: 0.0.1
 Author URI: http://kharissulistiyo.github.io
 */
 
+### Live Demo and More Details
+---
+
+http://www.kharissulistiyono.com/light-shortcode
+
 
 ### Available Shortcodes
+---
 
 * Button
 * Icon
@@ -34,6 +41,7 @@ Author URI: http://kharissulistiyo.github.io
 * Grid
 
 ### Screenshots
+---
 
 <img src="https://raw.github.com/kharissulistiyo/Light-Shortcode/master/screenshot-2.png" alt="Shortcode Menu" />
 
